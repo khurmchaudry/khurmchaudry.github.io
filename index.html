@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khurm Chaudry</title>
+  <meta name="description" content="Personal website of Khurm Chaudry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #fafaf9;
+  --text: #1c1c1c;
+  --muted: #6b6b6b;
+  --line: #e5e5e3;
+  --accent: #2f5bea;
+  --max: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #ececec;
+    --muted: #9a9a9a;
+    --line: #2a2a2a;
+    --accent: #7c9bff;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header,
+main,
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.logo { font-weight: 600; letter-spacing: 0.04em; }
+
+nav { display: flex; gap: 24px; }
+nav a { color: var(--muted); font-size: 15px; transition: color .2s; }
+nav a:hover { color: var(--text); }
+
+/* Hero */
+.hero { padding: 96px 0 80px; }
+
+.eyebrow { color: var(--muted); margin: 0 0 8px; }
+
+h1 {
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+}
+
+.lead {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 34ch;
+  margin: 0 0 36px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background .2s, color .2s;
+}
+.button:hover { background: var(--text); color: var(--bg); }
+
+/* Sections */
+.section {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+.section-body p { margin: 0 0 16px; }
+.section-body p:last-child { margin-bottom: 0; }
+
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.timeline li:last-child { margin-bottom: 0; }
+.timeline h3 { font-size: 17px; font-weight: 600; margin: 0; }
+.timeline p { margin: 0; }
+.when, .where { color: var(--muted); font-size: 15px; }
+.where { margin-bottom: 6px !important; }
+
+.certs {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding-top: 8px;
+}
+
+.link { color: var(--accent); font-weight: 500; }
+.link:hover { text-decoration: underline; }
+
+/* Footer */
+.site-footer {
+  padding-top: 40px;
+  padding-bottom: 56px;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--line);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .site-header, main, .site-footer { padding-left: 16px; padding-right: 16px; }
+  nav { gap: 16px; }
+  .hero { padding: 56px 0 56px; }
+  .section { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; }
+  .timeline li { grid-template-columns: 1fr; gap: 4px; }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">KC</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Khurm Chaudry</h1>
+      <p class="lead">IT audit, compliance and risk leader based in London, with 20 years in technology audit across banking, fintech and global business.</p>
+      <a class="button" href="https://www.linkedin.com/in/khurm-chaudry/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="section-body">
+        <p>I'm an adaptable, versatile auditor with deep experience across every area of IT audit: infrastructure, applications, networking, cyber security and cloud security. My work also spans project assurance, change audit, IT risk management, integrated application controls, ITGC, SOX, GDPR, DORA, PCI DSS, ISO 27001 and general internal audit.</p>
+        <p>I'm a subject-matter expert in anti-money laundering, audit methodology, and IT third-party and outsourced-services governance. I also enjoy developing people through coaching, mentoring and training.</p>
+        <p>I believe that if something is worth doing, it's worth doing well.</p>
+        <p class="certs">CISSP · CISA · CRISC · CCSK · PRINCE2 · CDPSE · CEH · CAMS · CISI · IPA · AFA · ATA</p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <ul class="section-body timeline">
+        <li>
+          <span class="when">2024 – 2025</span>
+          <div>
+            <h3>IT Audit Assistant Director</h3>
+            <p class="where">Rothschild &amp; Co</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2023 – 2024</span>
+          <div>
+            <h3>Senior Audit Manager, IT and Cyber Security (Head of IT Audit)</h3>
+            <p class="where">Zepz</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2022 – 2023</span>
+          <div>
+            <h3>Senior Audit Manager, IT and Programme Assurance</h3>
+            <p class="where">Reckitt</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2020 – 2022</span>
+          <div>
+            <h3>Senior IT Audit Manager</h3>
+            <p class="where">Comcast</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2017 – 2020</span>
+          <div>
+            <h3>Director, IT Audit, Compliance and Risk Consultant</h3>
+            <p class="where">Technology Risk &amp; Controls Consulting Ltd</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2015 – 2017</span>
+          <div>
+            <h3>Senior Audit Manager (IT &amp; Change / Risk)</h3>
+            <p class="where">Direct Line Group</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2012 – 2015</span>
+          <div>
+            <h3>Vice President, IT Audit</h3>
+            <p class="where">GE Capital</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2010 – 2012</span>
+          <div>
+            <h3>Principal Internal Auditor, EMEA</h3>
+            <p class="where">Symantec</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2008 – 2009</span>
+          <div>
+            <h3>Associate Director, Internal Audit (IT, Change and Third Parties)</h3>
+            <p class="where">Barclays</p>
+            <p>Audited UK and overseas business processes and IT sourced from third parties, within a 600-strong global audit function.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2005 – 2008</span>
+          <div>
+            <h3>Senior IT &amp; Internal Auditor</h3>
+            <p class="where">British Airways</p>
+            <p>Financial and operational audits across the Group in the UK and overseas, including Sarbanes-Oxley compliance.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="section-body">
+        <p>The best way to reach me is on LinkedIn.</p>
+        <p><a class="link" href="https://www.linkedin.com/in/khurm-chaudry/" target="_blank" rel="noopener">linkedin.com/in/khurm-chaudry →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Khurm Chaudry</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
